@@ -5,41 +5,47 @@ function Todolist() {
     <div className="todo-list-container">
       <div className="todo-list-header">
         <h1>TODO</h1>
-        <img src={iconSun} />
+        <button>
+          <img src={iconSun} />
+        </button>
       </div>
       <div className="tasks">
         <div className="task current-type">
-          <input type="checkbox" />
-          Current typing
+          <div className="decorative-checkbox"></div>
+          <input type="text" placeholder="Current typing..." id="text" />
         </div>
         <div className="task">
-          <input type="checkbox" />
-          Complete online javascript Course
-        </div>
-        <hr />
-        <div className="task">
-          <input type="checkbox" />
-          Jog arround the park 3x
+          <input type="checkbox" id="rounded-checkbox-0" />
+          <label htmlFor="rounded-checkbox-0">
+            Complete online javascript Course
+          </label>
         </div>
         <hr />
         <div className="task">
-          <input type="checkbox" />
-          10 minutes meditation
+          <input type="checkbox" id="rounded-checkbox-1" />
+          <label htmlFor="rounded-checkbox-1">Jog arround the park 3x</label>
         </div>
         <hr />
         <div className="task">
-          <input type="checkbox" className="circle" />
-          Read for 1hour
+          <input type="checkbox" id="rounded-checkbox-2" />
+          <label htmlFor="rounded-checkbox-2">10 minutes meditation</label>
         </div>
         <hr />
         <div className="task">
-          <input type="checkbox" />
-          Pick up groceries
+          <input type="checkbox" className="circle" id="rounded-checkbox-3" />
+          <label htmlFor="rounded-checkbox-3">Read for 1hour</label>
         </div>
         <hr />
         <div className="task">
-          <input type="checkbox" />
-          Complete todoApp on front-end Mentor
+          <input type="checkbox" id="rounded-checkbox-4" />
+          <label htmlFor="rounded-checkbox-4">Pick up groceries</label>
+        </div>
+        <hr />
+        <div className="task">
+          <input type="checkbox" id="rounded-checkbox-5" />
+          <label htmlFor="rounded-checkbox-5">
+            Complete todoApp on front-end Mentor
+          </label>
         </div>
         <hr />
       </div>

@@ -35,7 +35,6 @@
         transform: translate(-50%, -50%);
         width: 40%;
         height: fit-content;
-
         z-index: 1;
 
         .todo-list-header {
@@ -55,6 +54,7 @@
             img {
                 width: 2rem;
                 height: 2rem;
+                cursor: pointer;
             }
         }
 
@@ -68,19 +68,66 @@
             width: 100%;
         }
 
-        input {
-            border: 0.025rem solid white;
+        #text {
+            border: none;
+            padding: 0;
+            background: none;
+            outline: none;
+        }
+
+        #text:focus {
+            background: var(--Very-dark-desaturated-blue);
+        }
+
+        .decorative-checkbox {
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            background-color: transparent;
+            border: 0.025rem solid rgba(255, 255, 255, 0.171);
+            margin: 0 0.725rem 0 0;
+        }
+
+        input[type="checkbox"] {
+            border: 0.025rem solid rgba(255, 255, 255, 0.171);
             width: 1.5rem;
             height: 1.5rem;
             border-radius: 100vw;
             appearance: none;
             margin: 0 0.725rem 0 0;
+            cursor: pointer;
         }
+
+        label {
+            cursor: pointer;
+        }
+
+        /* Style the label when the checkbox is checked */
+        input:checked {
+            background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+            position: relative;
+
+            + label{
+                text-decoration: line-through;
+                color: var(--Dark-grayish-blue);
+            }
+
+            &::after {
+                content: "";
+                background-image: url(./assets/icon-check.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 0.75rem;
+                position: absolute;
+                inset: 0;
+            }
+        }
+
 
         .task {
             background-color: var(--Very-dark-desaturated-blue);
             height: 3.75rem;
-            color:var(--Light-grayish-blue);
+            color: var(--Light-grayish-blue);
             display: flex;
             align-items: center;
             justify-content: start;
@@ -89,20 +136,20 @@
             font-family: Josefin Sans;
         }
 
-        .info-list{
+        .info-list {
             display: flex;
             justify-content: space-between;
             color: var(--Dark-grayish-blue);
         }
 
-        .buttons{
+        .buttons {
             display: flex;
-            justify-content:space-around;
+            justify-content: space-around;
             align-items: center;
             gap: 1rem;
         }
 
-        .btn-hover:hover{
+        .btn-hover:hover {
             color: var(--Light-grayish-blue-hover)
         }
 
