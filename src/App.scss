@@ -33,7 +33,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 40%;
+        width: min(30rem, calc(100% - 4rem ));
         height: fit-content;
         z-index: 1;
 
@@ -73,6 +73,7 @@
             padding: 0;
             background: none;
             outline: none;
+            color: var(--Light-grayish-blue);
         }
 
         #text:focus {
@@ -97,7 +98,7 @@
             margin: 0 0.725rem 0 0;
             cursor: pointer;
         }
-
+        
         label {
             cursor: pointer;
         }
@@ -122,7 +123,6 @@
                 inset: 0;
             }
         }
-
 
         .task {
             background-color: var(--Very-dark-desaturated-blue);
@@ -159,7 +159,6 @@
 
     }
 
-
     .footer {
         text-align: center;
         font-size: 0.725rem;
@@ -169,4 +168,11 @@
         position: absolute;
         bottom: 5%;
     }
+}
+
+@media not all and (min-width: 950px) {
+
+    
+
+
 }

@@ -1,6 +1,6 @@
 import "./App.scss";
 import Footer from "./footer";
-import Todolist from "./todo-list"
+import Todolist from "./todo-list";
 
 
 function App() {
